@@ -1,0 +1,35 @@
+# dependencies
+node_modules/
+web/node_modules/
+
+# build output
+BlogApi/target/
+web/dist/
+*.class
+*.zip
+
+# runtime data
+/BlogApi/data/
+/data/
+/upload/
+**/static/upload/
+*.log
+
+# local config / secrets
+application-local.yml
+*.local.yml
+.env
+.env.*
+
+# local-only agent instructions
+/AGENTS.md
+
+# local-only submission materials
+/docs/
+
+# IDE / OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
