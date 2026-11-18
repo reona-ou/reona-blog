@@ -15,6 +15,7 @@ const routes = [
       { path: '', name: 'home', component: () => import('@/views/HomeView.vue') },
       { path: 'blog', name: 'blog', component: () => import('@/views/BlogView.vue') },
       { path: 'blog/:id', name: 'article', component: () => import('@/views/ArticleView.vue') },
+      { path: 'calendar', name: 'calendar', component: () => import('@/views/CalendarView.vue') },
       { path: 'about', name: 'about', component: () => import('@/views/AboutView.vue') },
       {
         path: 'account',
@@ -33,6 +34,12 @@ const routes = [
     children: [
       { path: '', redirect: '/admin/overview' },
       { path: 'overview', name: 'admin-overview', component: () => import('@/views/admin/AdminOverview.vue') },
+      {
+        path: 'calendar',
+        name: 'admin-calendar',
+        component: () => import('@/views/admin/AdminCalendar.vue'),
+        meta: { requiresSuperAdmin: true }
+      },
       { path: 'articles', name: 'admin-articles', component: () => import('@/views/admin/AdminArticles.vue') },
       { path: 'users', name: 'admin-users', component: () => import('@/views/admin/AdminUsers.vue') },
       {

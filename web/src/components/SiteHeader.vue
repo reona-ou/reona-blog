@@ -135,6 +135,7 @@ const languages = supportedLocales
 const navItems = computed(() => [
   { label: t('nav.home'), to: '/' },
   { label: t('nav.blog'), to: '/blog' },
+  { label: t('nav.calendar'), to: '/calendar' },
   { label: t('nav.about'), to: '/about' }
 ])
 

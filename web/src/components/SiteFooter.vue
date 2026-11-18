@@ -13,6 +13,7 @@
         <div class="footer-column">
           <span class="footer-label">{{ t('footer.browse') }}</span>
           <RouterLink to="/blog">{{ t('footer.blog') }}</RouterLink>
+          <RouterLink to="/calendar">{{ t('footer.calendar') }}</RouterLink>
           <RouterLink to="/about">{{ t('footer.about') }}</RouterLink>
         </div>
         <div class="footer-column">

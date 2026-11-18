@@ -14,6 +14,10 @@
           <el-icon><Grid /></el-icon>
           <span>{{ t('admin.shell.navOverview') }}</span>
         </RouterLink>
+        <RouterLink v-if="userStore.isSuperAdmin" to="/admin/calendar" class="admin-nav-link">
+          <el-icon><Calendar /></el-icon>
+          <span>{{ t('admin.shell.navCalendar') }}</span>
+        </RouterLink>
         <RouterLink to="/admin/articles" class="admin-nav-link">
           <el-icon><Document /></el-icon>
           <span>{{ t('admin.shell.navArticles') }}</span>
@@ -107,6 +111,7 @@ const languages = supportedLocales
 const pageTitle = computed(() => {
   const map = {
     'admin-overview': t('admin.shell.navOverview'),
+    'admin-calendar': t('admin.shell.navCalendar'),
     'admin-articles': t('admin.shell.navArticles'),
     'admin-users': t('admin.shell.navUsers'),
     'admin-assistant': t('admin.shell.navAssistant'),

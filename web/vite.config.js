@@ -32,6 +32,9 @@ export default defineConfig({
           if (id.includes('node_modules/marked') || id.includes('node_modules/dompurify')) {
             return 'markdown'
           }
+          if (id.includes('node_modules/ical-expander') || id.includes('node_modules/ical.js')) {
+            return 'calendar'
+          }
           if (
             id.includes('node_modules/vue') ||
             id.includes('node_modules/@vue') ||
